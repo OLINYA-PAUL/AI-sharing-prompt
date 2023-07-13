@@ -1,6 +1,6 @@
 
 ### Project Setup ###
-ensure to install NODEJS all dependenses using npm install command prompt package.json file
+ensure to install NODEJS all dependenses using npm install command prompt based on the package.json file
 
 ### Create ENV Files ###
 Create .env file
