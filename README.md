@@ -1,5 +1,4 @@
 
-![AI Prompt Sharing](https://i.ibb.co/9pQNZZy/Thumbnail-27.png)
 ### Project Setup ###
 ensure to install all dependenses using npm install command prompt
 
