@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  column-rule-color: inherit;
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.main_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  justify-content: center;
+}
+.main_container::before {
+  position: absolute;
+  content: "";
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.main_container::after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: invert(1);
+  position: absolute;
+  opacity: 0.4;
+}
+.gradient_container {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+}
+.global_shadow {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+/* .dark_btn,
+.btn_outline {
+  border-radius: 20px;
+} */
+
+.global_container {
+  @apply relative z-10 flex  flex-col mx-auto p-5 max-sm:p-3;
+}
+.text_full {
+  @apply text-[60px] font-extrabold font-satoshi mt-[50px] text-black;
+}
+.text_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+.text_prompt {
+  @apply font-bold text-2xl font-satoshi ml-3 text-black hidden xl:block max-sm:hidden tracking-wide;
+}
+
+.dark_btn {
+  @apply pl-3.5 pr-3.5 p-1 bg-black text-white outline-none border-none text-center font-semibold;
+}
+.btn_outline {
+  @apply pl-3.5 pr-3.5 p-1 bg-none text-black border-black  border-[1px] text-center font-semibold;
+}
+
+.text_heading {
+  @apply text-[60px] font-extrabold font-satoshi text-black;
+}
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+.glassmorphism {
+  @apply bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg border rounded-lg p-5;
+}
+
+.prompt_card {
+  @apply break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter max-sm:w-full max-sm:mt-5 w-auto mr-5 max-sm:mr-0 hyphens-auto;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex  justify-between items-center;
+}
+.prompt_layout {
+  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3 text-left;
+}
